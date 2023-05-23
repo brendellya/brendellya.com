@@ -1,0 +1,164 @@
+
+body {
+  margin: 0;
+  background-color: var(--bt-body-bg);
+  color: var(--bt-body-color);
+  font-family: var(--bt-font-primary);
+  font-size: $font-size;
+}
+
+a {
+  color: var(--bt-link-color);
+  text-decoration: none;
+
+  &:hover, active {
+    text-decoration: underline;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+.bg-gray {
+  background-color: pink;
+}
+
+
+$timelineHeight: 400px;
+$timelineSegmentWidth: 120px;
+$timelineSegmentHeight: 10px;
+$timelineDotSize: 8px;
+$timelinePlotLineHeight: 20px;
+$timelinePlotLineWidth: 4px;
+$timelineSpotXl: 400px;
+$timelineSpotLg: 300px;
+$timelineSpotMd: 200px;
+$timelineSpotSm: 100px;
+
+.timeline {
+  margin: 12px;
+  height: $timelineHeight;
+  white-space: nowrap;
+  overflow-y: hidden;
+
+  li {
+    display: inline-block;
+    margin: 1px 2px;
+    height: $timelineSegmentHeight;
+    width: $timelineSegmentWidth;
+    background-color: rgba(163, 158, 229, 0.5);
+    position: relative;
+    top: calc(($timelineHeight / 2) - ($timelineSegmentHeight / 2));
+
+    &:before {
+      content: '';
+      display: inline-block;
+      margin-left: calc(($timelineDotSize / 2) - $timelineDotSize);
+      width: $timelineDotSize;
+      height: $timelineDotSize;
+      position: absolute;
+      left: 50%;
+      background-color: rgba(87, 77, 231, 0.5);
+      border-radius: 50%;
+      z-index: 2;
+    }
+  }
+
+  .box {
+    border: 1px solid black;
+    background-color: white;
+    width: $timelineSpotMd;
+    margin-left: calc(($timelineSpotMd / 2 - $timelineSpotMd) + ($timelineSegmentWidth / 2));
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+
+    &.lg {
+      width: $timelineSpotLg;
+      margin-left: calc(($timelineSpotLg / 2 - $timelineSpotLg) + ($timelineSegmentWidth / 2));
+    }
+
+    &.xl {
+      width: $timelineSpotXl;
+    }
+
+    .line {
+      width: $timelinePlotLineWidth;
+      height: $timelinePlotLineHeight;
+      margin-left: calc(($timelinePlotLineWidth / 2) - $timelinePlotLineWidth);
+      background: rgba(0,0,0,0.3);
+      display: inline-block;
+      left: 50%;
+      position: absolute;
+      z-index: 1;
+    }
+
+    &.bottom {
+      bottom: unset;
+      top: 20px;
+
+      .line {
+        top: -20px;
+      }
+    }
+  }
+}
+
+$skillCardMargin: 5px;
+$skillCardWidth: 120px;
+$skillCardHeight: 120px;
+$skillCardDefaultColor: #e1e1e1;
+$skillCardBorder: 2px solid rgba(0,0,0,0.05);
+$skillCardBorderRadius: 2px;
+$skillCardScale: 1.25;
+
+
+.skill-table {
+
+  li {
+    display: inline-block;
+    margin: $skillCardMargin;
+    height: $skillCardHeight;
+    width: $skillCardWidth;
+    position: relative;
+
+    .skill {
+      width: 100%;
+      height: 100%;
+      background-color: $skillCardDefaultColor;
+      border: $skillCardBorder;
+      border-radius: $skillCardBorderRadius;
+      position: absolute;
+      z-index: 1;
+
+      h5 {
+        text-transform: capitalize;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      small {
+        font-size: 1.25rem;
+      }
+      small span {
+        padding-left: .25rem;
+        font-size: 1rem;
+        opacity: 0.5;
+        display: none;
+      }
+
+
+      &:hover {
+        transform: scale($skillCardScale);
+        z-index: 10;
+
+        small span {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+
