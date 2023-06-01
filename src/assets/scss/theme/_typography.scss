@@ -1,0 +1,80 @@
+
+%heading {
+  margin: 0;
+  font-family: var(--bt-font-heading);
+}
+
+h1, .h1 {
+  @extend %heading;
+  font-size: $h1-font-size;
+}
+
+h2, .h2 {
+  @extend %heading;
+  font-size: $h2-font-size;
+}
+
+h3, .h3 {
+  @extend %heading;
+  font-size: $h3-font-size;
+}
+
+h4, .h4 {
+  @extend %heading;
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  @extend %heading;
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  @extend %heading;
+  font-size: $h6-font-size;
+}
+
+// Font Sizes
+.font {
+  &-xs {
+    font-size: $font-size-xs;
+  }
+
+  &-sm {
+    font-size: $font-size-sm;
+  }
+
+  &-md {
+    font-size: $font-size;
+  }
+
+  &-lg {
+    font-size: $font-size-lg;
+  }
+
+  &-xl {
+    font-size: $font-size-xl;
+  }
+  &-xxl {
+    font-size: $font-size-xxl;
+  }
+}
+
+// Font Weights
+.font {
+  &-weight-light {
+    font-weight: $font-weight-light;
+  }
+  &-weight-normal {
+    font-weight: $font-weight-normal;
+  }
+  &-weight-semibold {
+    font-weight: $font-weight-semibold;
+  }
+  &-weight-bold {
+    font-weight: $font-weight-bold;
+  }
+  &-weight-bolder {
+    font-weight: $font-weight-bolder;
+  }
+}

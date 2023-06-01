@@ -1,0 +1,116 @@
+$timelineBg: #f9fcff;
+$timelineHeight: 480px;
+$timelineSegmentWidth: 20px;
+$timelineSegmentHeight: 10px;
+$timelineDotSize: 8px;
+$timelinePlotLineHeight: 40px;
+$timelinePlotLineWidth: 4px;
+$timelineSpotXl: 500px;
+$timelineSpotLg: 400px;
+$timelineSpotMd: 300px;
+$timelineSpotSm: 150px;
+$timelineCardShadow: 0 8px 17px 2px rgba(0,0,0,0.14),
+0 3px 14px 2px rgba(0,0,0,0.12),
+0 5px 5px -3px rgba(0,0,0,0.2);
+
+@mixin cardSize ($size: $timelineSpotMd) {
+  width: $size;
+  margin-left: calc(($size / 2 - $size) + ($timelineSegmentWidth / 2));
+}
+
+.timeline_actions {
+  button {
+    min-width: 16rem;
+    text-align: center;
+  }
+}
+.timeline_panel {
+  margin: 12px;
+  height: $timelineHeight;
+  background-color: $timelineBg;
+  white-space: nowrap;
+  overflow-y: hidden;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    height: $timelineSegmentHeight;
+    width: $timelineSegmentWidth;
+    background-color: rgba(163, 158, 229, 0.5);
+    position: relative;
+    top: calc(($timelineHeight / 2) - ($timelinePlotLineHeight / 2));
+  }
+  .segment-line {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: var(--bt-gray-500);
+    position: absolute;
+    top: -10px;
+    font-size: 1rem;
+    text-indent: 2px;
+    color: var(--bt-gray-500);;
+  }
+}
+
+.timeline_card {
+  .card {
+    padding: 1rem;
+    background-color: white;
+    position: absolute;
+    bottom: $timelinePlotLineHeight;
+    z-index: 10;
+    box-shadow: $timelineCardShadow;
+
+    @include cardSize;
+
+    &.sm {
+      @include cardSize($timelineSpotSm);
+    }
+
+    &.lg {
+      @include cardSize($timelineSpotLg);
+    }
+
+    &.xl {
+      width: $timelineSpotXl;
+      @include cardSize($timelineSpotXl);
+    }
+  }
+
+  .line {
+    width: $timelinePlotLineWidth;
+    height: $timelinePlotLineHeight;
+    margin-left: calc(($timelinePlotLineWidth / 2) - $timelinePlotLineWidth);
+    background: rgba(0,0,0,0.1);
+    display: inline-block;
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+  }
+  //&:before {
+  //  content: '';
+  //  display: inline-block;
+  //  margin-left: calc(($timelineDotSize / 2) - $timelineDotSize);
+  //  width: $timelineDotSize;
+  //  height: $timelineDotSize;
+  //  position: absolute;
+  //  left: 50%;
+  //  background-color: rgba(87, 77, 231, 0.5);
+  //  border-radius: 50%;
+  //  z-index: 2;
+  //}
+
+  &.bottom {
+    .card {
+      bottom: unset;
+      top:$timelinePlotLineHeight;
+    }
+
+    .line {
+      bottom: unset;
+    }
+  }
+}

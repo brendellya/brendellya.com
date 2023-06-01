@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@300;400;500;700&display=swap');
 
 // Bootstrap Custom Grid
-@import "vendor/bootstrap";
-@import "vendor/font-awesome";
+@import 'base/bs-variables';
+@import "base/bootstrap";
+
+// FA
+@import "base/font-awesome";
 
 
-@import "base";
+@import "theme/colors";
+@import "theme/typography";
+
+@import "theme/root";
+@import "theme/theme-dark";
+@import "theme/mixins";
+@import "theme/global";

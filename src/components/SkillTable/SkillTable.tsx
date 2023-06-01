@@ -1,5 +1,7 @@
 import { ISkillsModel } from '../Skills/Skills.types';
 
+import './SKillTable.scss';
+
 interface ISkillTableProps {
   skills: ISkillsModel[];
 }

@@ -1,0 +1,19 @@
+$headerHeight: 8rem;
+$headerBg: #1c1c1c;
+$headerColor: #eeeeee;
+
+ // Todo: fix header
+header {
+  padding: 2rem 0;
+  background-color: $headerBg;
+  color: $headerColor;
+  min-height: $headerHeight;
+
+  .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .brand {
+    line-height: 4rem;
+  }
+}

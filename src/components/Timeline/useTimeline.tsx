@@ -1,14 +1,21 @@
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { format as formatDate } from 'date-fns';
 
-import { TODAY, STARTDATE } from './Timeline.constants';
+import {
+  TODAY,
+  STARTDATE,
+  TIMEZONE,
+  DEFAULT_SEGMENT,
+} from './Timeline.constants';
+import { formatLocalDate } from '../../helpers/helpers';
 
 const useTimeline = () => {
   const getMonthYears = useMemo(() => {
     let currentDate = STARTDATE;
     const years: string[] = [];
+
     do {
-      const formattedDate = formatDate(currentDate, 'yyyy-MM-dd');
+      const formattedDate = formatDate(currentDate, 'yyyy-MM');
 
       if (!years.includes(formattedDate)) {
         years.push(formattedDate);
@@ -26,8 +33,22 @@ const useTimeline = () => {
     return years;
   }, []);
 
+  const getSegmentCount = useCallback(
+    (slot: string, interval = DEFAULT_SEGMENT) => {
+      const dates = formatLocalDate(slot, false);
+      const segmentMatch =
+        dates.fullYear && dates.fullYear % interval ? false : true;
+
+      return dates.month !== undefined && dates.month < 1 && segmentMatch
+        ? dates.shortYear
+        : false;
+    },
+    [],
+  );
+
   return {
     getMonthYears,
+    getSegmentCount,
   };
 };
 

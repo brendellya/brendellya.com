@@ -1,0 +1,45 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bt-body-bg);
+  color: var(--bt-body-color);
+  font-family: var(--bt-font-primary);
+  font-size: $font-size;
+}
+
+a {
+  color: var(--bt-link-color);
+  text-decoration: none;
+
+  &:hover, active {
+    text-decoration: underline;
+  }
+}
+
+.disabled, [disabled] {
+  opacity: $disableOpacity;
+  cursor: default;
+}
+
+
+section {
+  padding: 1rem;
+}
+
+
+button {
+  padding: $button-padding;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  @include buttons();
+}
+
+
+

@@ -1,0 +1,13 @@
+
+
+@mixin buttons ($color: $blue-dark-3, $bg: $blue-light-4, $border: $blue-dark-3) {
+  color: $color;
+  background-color: $bg;
+  border: 1px solid $border;
+
+  &:hover, &:active {
+    color: $color;
+    background-color: darken($bg, 10);
+    border: 1px solid $border;
+  }
+}
