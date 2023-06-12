@@ -1,4 +1,6 @@
-$timelineBg: #f9fcff;
+@import "assets/scss/index";
+
+$timelineBg: $gray-100;
 $timelineHeight: 480px;
 $timelineSegmentWidth: 20px;
 $timelineSegmentHeight: 10px;
@@ -20,23 +22,22 @@ $timelineCardShadow: 0 8px 17px 2px rgba(0,0,0,0.14),
 
 .timeline_actions {
   button {
-    min-width: 16rem;
+    margin: 0 .5rem;
     text-align: center;
   }
 }
 .timeline_panel {
-  margin: 12px;
   height: $timelineHeight;
   background-color: $timelineBg;
   white-space: nowrap;
-  overflow-y: hidden;
+  overflow: hidden;
 
   li {
     display: inline-block;
     margin: 0;
     height: $timelineSegmentHeight;
     width: $timelineSegmentWidth;
-    background-color: rgba(163, 158, 229, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     position: relative;
     top: calc(($timelineHeight / 2) - ($timelinePlotLineHeight / 2));
   }
@@ -106,7 +107,7 @@ $timelineCardShadow: 0 8px 17px 2px rgba(0,0,0,0.14),
   &.bottom {
     .card {
       bottom: unset;
-      top:$timelinePlotLineHeight;
+      top: $timelinePlotLineHeight;
     }
 
     .line {

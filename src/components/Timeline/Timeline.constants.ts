@@ -8,6 +8,13 @@ export const STARTDATE = new Date(1994, 6, 1);
 export const DEFAULT_INTERVAL = 'month';
 export const DEFAULT_SEGMENT = 5;
 
+export const SCROLL_DIRECTION = {
+  Forward: 'forward',
+  Back: 'back',
+  First: 'first',
+  Last: 'last',
+};
+
 export const jobExperiences: IExperience[] = [
   {
     startDate: '01/01/1995',

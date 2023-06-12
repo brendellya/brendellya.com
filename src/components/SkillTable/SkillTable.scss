@@ -1,0 +1,78 @@
+$skillCardMargin: 5px;
+$skillCardWidth: 90px;
+$skillCardHeight: 90px;
+$skillCardDefaultColor: #e1e1e1;
+$skillCardBorder: 2px solid rgba(0,0,0,0.05);
+$skillCardBorderRadius: 2px;
+$skillCardScale: 1.5;
+
+$pink: #cb88ec;
+
+.skill-table {
+
+  .element {
+    display: inline-block;
+    margin: $skillCardMargin;
+    height: $skillCardHeight;
+    width: $skillCardWidth;
+    position: relative;
+  }
+
+  .skill:not(.placeholder) {
+    width: 100%;
+    height: 100%;
+    background-color: $skillCardDefaultColor;
+    border: $skillCardBorder;
+    border-radius: $skillCardBorderRadius;
+    position: absolute;
+    z-index: 1;
+
+    .name {
+      text-transform: capitalize;
+
+    }
+    small span {
+      padding-left: .25rem;
+      font-size: 1rem;
+      opacity: 0.5;
+      display: none;
+    }
+    &:hover {
+      transform: scale($skillCardScale);
+      z-index: 10;
+
+      small span {
+        display: inline-block;
+      }
+    }
+  }
+
+  .skill {
+    &.placeholder {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: rgba(128, 128, 128, 0.30);
+      border: 1px solid rgba(128, 128, 128, 0.10);
+    }
+
+    &[data-color='purple'] {
+      background-color: rgba(205,123,246,0.8);
+    }
+    &[data-color='blue'] {
+      background-color: rgba(131,196,250,0.8);
+    }
+    &[data-color='pink'] {
+      background-color: rgba(248,138,241,0.80);
+    }
+    &[data-color='yellow'] {
+      background-color: rgba(255,208,108,0.8);
+    }
+    &[data-color='orange'] {
+      background-color: rgba(248,151,90,0.8);
+    }
+  }
+}

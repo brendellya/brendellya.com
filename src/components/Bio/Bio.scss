@@ -1,0 +1,75 @@
+@import "assets/scss/index";
+
+@mixin brackets () {
+  font-family: 'Roboto Light';
+  position: absolute;
+  top: 0;
+  font-size: 20rem;
+  color: rgba(0, 0, 0, .1);
+}
+
+.section-bio {
+  .text-heading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .text-subheading {
+    color: black;
+    font-family: "Roboto Slab";
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  .expertise {
+    min-height: 240px;
+    max-width: 840px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+
+
+      li {
+        display: inline-block;
+        padding: 1rem 2rem;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+        background-color: white;
+        box-shadow: $shadow-1;
+        margin: 1rem;
+      }
+
+    &:before {
+      content: "{";
+      left: 0;
+
+      @include brackets;
+    }
+    &:after {
+      content: '}';
+      right: 0;
+
+      @include brackets;
+    }
+  }
+
+
+  .facts {
+    li {
+      line-height: 2;
+    }
+
+    i {
+        font-size: 2rem;
+        margin-right: 1rem;
+        color: var(--bt-primary);
+    }
+  }
+
+  .collage {
+    background: url('../../assets/img/20220516_153444.jpg') center 0 no-repeat;
+    background-size: cover;
+  }
+}
+

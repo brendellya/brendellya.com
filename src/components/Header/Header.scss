@@ -1,19 +1,25 @@
-$headerHeight: 8rem;
-$headerBg: #1c1c1c;
-$headerColor: #eeeeee;
+@import "assets/scss/base/bs-variables";
 
  // Todo: fix header
 header {
   padding: 2rem 0;
-  background-color: $headerBg;
-  color: $headerColor;
+  width: 100%;
   min-height: $headerHeight;
+  position: fixed;
+  background-color: var(--bt-header-bg);
+  color: var(--bt-header-color);
+  box-shadow: $shadow-2;
+  z-index: 1000;
 
   .logo {
     width: 4rem;
     height: 4rem;
   }
   .brand {
+    font-size: 2rem;
+    letter-spacing: .2rem;
     line-height: 4rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
   }
 }

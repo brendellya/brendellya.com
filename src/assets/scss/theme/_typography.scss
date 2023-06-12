@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@200;300;400;500;700&family=Roboto:ital,wght@0,400;1,100&display=swap');
 
 %heading {
   margin: 0;
@@ -76,5 +77,26 @@ h6, .h6 {
   }
   &-weight-bolder {
     font-weight: $font-weight-bolder;
+  }
+}
+
+// Text Styles
+
+.text {
+  &-heading {
+    color: black;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  &-subheading {
+    font-family: 'Roboto Slab';
+    font-weight: $font-weight-semibold;
+  }
+  &-primary {
+    color: var(--bt-primary);
+  }
+  &-accent {
+    color: var(--bt-accent);
   }
 }

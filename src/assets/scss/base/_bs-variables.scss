@@ -25,14 +25,18 @@ $blue-dark-3: #1565c0;
 $blue-dark-4: #0d47a1;
 $blue-dark-5: #083a88;
 
-$primary: $gray-700;
-$secondary: $gray-300;
+$primary: rgba(147, 116, 138, 0.44);
+$secondary: #AF3B6E;
+$accent: #bc6c25;
 
 $colors: (
         "black":      $black,
         "white":      $white,
         "gray":       $gray-600,
-        "gray-dark":  $gray-800
+        "gray-dark":  $gray-800,
+        "primary": $primary,
+        "secondary": $secondary,
+        "accent": $accent,
 );
 
 $blues: (
@@ -56,11 +60,15 @@ $spacers: (
         3: $spacer * 1.5,
         4: $spacer * 2,
         5: $spacer * 3,
+        6: $spacer * 4,
+        7: $spacer * 5,
 );
+
 
 //$headings-margin-bottom: 0;
 
 $font-size-base: 1rem;
+$line-height-base: 1.5;
 
 $font-size: 1.6rem;
 $font-size-xs: 1rem;
@@ -92,5 +100,22 @@ $disableOpacity: 0.6;
 $border-radius: 0.4rem;
 
 // Buttons
-$button-padding: 1rem 2rem;
+$button-padding: 0 2rem;
 $button-border: 1px solid;
+
+
+/*
+    Custom Theme Vars
+ */
+
+$headerHeight: 8rem;
+
+
+$icon-plane: '\f072';
+
+// Shadows
+$shadow-1: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+$shadow-2: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+$shadow-3: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+$shadow-4: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+$shadow-5: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);

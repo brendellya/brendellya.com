@@ -15,7 +15,7 @@ body {
 
 a {
   color: var(--bt-link-color);
-  text-decoration: none;
+  text-decoration: 1px dotted underline;
 
   &:hover, active {
     text-decoration: underline;
@@ -27,19 +27,48 @@ a {
   cursor: default;
 }
 
+main.container {
+  padding-top: $headerHeight;
+}
 
 section {
-  padding: 1rem;
 }
 
 
 button {
   padding: $button-padding;
   border-radius: $border-radius;
+  font-family: 'Roboto';
+  font-size: 1.2rem;
   cursor: pointer;
+  height: 32px;
+  line-height: 32px;
 
-  @include buttons();
+  @include buttonsDefault();
 }
 
+.btn {
+  &-link {
+    @include buttonsLink();
+  }
+
+  &-sm {
+    min-width: 10rem;
+  }
+  &-md {
+    min-width: 15rem;
+  }
+  &-lg {
+    min-width: 20rem;
+  }
+}
+
+.divider {
+  text-align: center;
+  height: 2px;
+  background: #80808024;
+  position: relative;
+  width: 33%;
+}
 
 

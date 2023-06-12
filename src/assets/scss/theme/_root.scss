@@ -1,17 +1,23 @@
 :root {
-  --bt-font-primary: 'Roboto Condensed', sans-serif;
-  --bt-font-heading: 'Roboto Slab', serif;
-  --bt-primary: #616161;
-  --bt-secondary: #e0e0e0;
-  --bt-body-bg: #BCC3CBFF;
-  --bt-body-color: #212121;
-  --bt-link-color: #dee2e6;
-  --bt-block-a: #ced4da;
-  --bt-block-b: #adb5bd;
-
   @each $name, $value in $grays {
     --bt-gray-#{$name}: #{$value};
   }
+
+  @each $name, $value in $colors {
+    --bt-#{$name}: #{$value};
+  }
+
+  --bt-font-primary: 'Roboto Slab', sans-serif;
+  --bt-font-heading: 'Roboto', sans-serif;
+  --bt-heading-color: #AF3B6E;
+  --bt-header-bg: #252422;
+  --bt-header-color: #fff;
+  --bt-body-bg: #000;
+  --bt-body-color: #252422;
+  --bt-link-color: #8d8d8d;
+  --bt-block-a: #ced4da;
+  --bt-block-b: #adb5bd;
+
 
 }
 

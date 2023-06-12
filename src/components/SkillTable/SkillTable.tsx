@@ -1,34 +1,30 @@
-import { ISkillsModel } from '../Skills/Skills.types';
+import { SORT_OPTIONS } from 'components/Skills';
+import { setRandomColor } from './Skilltable.helpers';
+import { ISkillTableProps, ISkillItemProps, useSkillTable, SkillItem, EmptySkillItem } from './index';
 
-import './SKillTable.scss';
+import './SkillTable.scss';
 
-interface ISkillTableProps {
-  skills: ISkillsModel[];
-}
+const SkillTable = ({ skills, sortName = SORT_OPTIONS.Alpha, sortAsc = true }: ISkillTableProps) => {
+  const { sortedData } = useSkillTable(skills, sortName, sortAsc);
+  let skillIndex = 0;
+  let currentColor = setRandomColor();
 
-// Todo: review prop/data relation ( pass skills from container? or reference in component?)
-const SkillTable = ({ skills }: ISkillTableProps) => {
   return (
-    <ul className='skill-table my-4'>
-      {skills.map((skill, index) => {
+    <ul className='skill-table'>
+      {sortedData.map((skill, index) => {
+        if (skill.name !== 'placeholder') {
+          skillIndex++;
+        } else {
+          currentColor = setRandomColor();
+        }
+
         return (
-          <li key={index}>
-            <div className='skill p-1'>
-              <div className='d-flex justify-content-between'>
-                <small>{index + 1}</small>
-                <i className='fa fa-smile-o' title='I love it!'></i>
-              </div>
-              <div className='name'>
-                <h5>{skill.symbol}</h5>
-                <small>
-                  {skill.name} <span>({skill.version})</span>
-                </small>
-              </div>
-              <div className='details d-flex'>
-                <div className='lastUsed'>{skill.lastUsed}</div>
-                <div className='experience'>{skill.yearsExp}</div>
-              </div>
-            </div>
+          <li className='d-inline-block' key={index}>
+            {skill?.name !== 'placeholder' ? (
+              <SkillItem skill={skill} index={index} color={currentColor} />
+            ) : (
+              <EmptySkillItem />
+            )}
           </li>
         );
       })}
