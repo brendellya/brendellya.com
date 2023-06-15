@@ -7,7 +7,7 @@ type TSkillKeys = 'name' | 'category' | 'yearsExp' | 'lastUsed';
 const useSkillTable = (skills: ISkillModel[], sortName: string, sortAsc: boolean) => {
   const doSort = useCallback(
     (key: string = 'name', isAsc: boolean) => {
-      const sorted = skills.sort((a, b) => {
+      return skills.sort((a, b) => {
         const sortName = key as keyof Pick<ISkillModel, TSkillKeys>;
         let keyA = a[sortName];
         let keyB = b[sortName];
@@ -21,8 +21,6 @@ const useSkillTable = (skills: ISkillModel[], sortName: string, sortAsc: boolean
           return keyA < keyB ? 1 : keyA === keyB ? 0 : -1;
         }
       });
-
-      return sorted;
     },
     [skills],
   );
@@ -55,10 +53,9 @@ const useSkillTable = (skills: ISkillModel[], sortName: string, sortAsc: boolean
     });
 
     return groupData;
-  }, [sortName, skills, sortAsc, doSort]);
+  }, [sortName, sortAsc, doSort]);
 
   return {
-    doSort,
     sortedData,
   };
 };
