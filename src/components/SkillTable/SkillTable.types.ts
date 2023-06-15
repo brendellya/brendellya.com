@@ -1,13 +1,18 @@
-import { ISkillsModel } from 'components/Skills';
+import { ISkillModel } from 'components/Qualifications';
 
 export interface ISkillTableProps {
-  skills: ISkillsModel[];
+  skills: ISkillModel[];
   sortName: string;
   sortAsc: boolean;
 }
 
 export interface ISkillItemProps {
-  skill: Partial<ISkillsModel>;
+  skill: Partial<ISkillModel>;
   index: number;
   color?: string;
+  group?: string;
+}
+
+export interface ISkillColor {
+  [id: string]: string;
 }

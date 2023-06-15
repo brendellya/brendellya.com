@@ -1,10 +1,10 @@
 import { JSX, useState } from 'react';
 
-import { skills, SORT_OPTIONS } from './index';
+import { skillData, SORT_OPTIONS } from './index';
 import SkillTable from 'components/SkillTable';
 import SortButton from 'components/SortButton';
 
-const Skills = (): JSX.Element => {
+const Qualification = (): JSX.Element => {
   const [sortKey, setSortKey] = useState(SORT_OPTIONS.Alpha);
   const [isAsc, setIsAsc] = useState(true);
 
@@ -17,9 +17,9 @@ const Skills = (): JSX.Element => {
   return (
     <section className='row justify-content-center section-skills p-7 bg-gray-100'>
       <div className='col-12'>
-        <h2 className='text-heading text-center'>Skills</h2>
+        <h2 className='text-heading text-center'>Qualifications</h2>
 
-        <h3 className='text-subheading font-xl py-4'>Main Skills</h3>
+        <h3 className='text-subheading font-xl py-4'>Practical Skills</h3>
         <p>
           Below are some of my of my most relevant skills, in addition to the skills listed below there are skills that
           I've explored as personal learnings.
@@ -45,10 +45,10 @@ const Skills = (): JSX.Element => {
           />
         </div>
 
-        <SkillTable skills={skills} sortName={sortKey} sortAsc={isAsc} />
+        <SkillTable skills={skillData} sortName={sortKey} sortAsc={isAsc} />
       </div>
     </section>
   );
 };
 
-export default Skills;
+export default Qualification;

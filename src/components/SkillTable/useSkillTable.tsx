@@ -1,17 +1,14 @@
-import { useCallback, useMemo, useState } from 'react';
-import { ISkillsModel } from 'components/Skills';
+import { useCallback, useMemo } from 'react';
 
-const useSkillTable = (skills: ISkillsModel[], sortName: string, sortAsc: boolean) => {
-  let count = 0;
-  const [sort, setSort] = useState({
-    name: sortName,
-    isAsc: true,
-  });
+import { ISkillModel } from 'components/Qualifications';
 
+type TSkillKeys = 'name' | 'category' | 'yearsExp' | 'lastUsed';
+
+const useSkillTable = (skills: ISkillModel[], sortName: string, sortAsc: boolean) => {
   const doSort = useCallback(
     (key: string = 'name', isAsc: boolean) => {
       const sorted = skills.sort((a, b) => {
-        const sortName = key as keyof Pick<ISkillsModel, 'name' | 'yearsExp'>;
+        const sortName = key as keyof Pick<ISkillModel, TSkillKeys>;
         let keyA = a[sortName];
         let keyB = b[sortName];
 
@@ -31,15 +28,15 @@ const useSkillTable = (skills: ISkillsModel[], sortName: string, sortAsc: boolea
   );
 
   const sortedData = useMemo(() => {
-    console.log('sortedData ', Date.now());
+    let count = 0;
     const data = doSort(sortName, sortAsc);
-    const groupData: Partial<ISkillsModel>[] = [];
-    const placeholder: Pick<ISkillsModel, 'name'> = { name: 'placeholder' };
+    const groupData: Partial<ISkillModel>[] = [];
+    const placeholder: Pick<ISkillModel, 'name'> = { name: 'placeholder' };
 
     data.forEach((item, index) => {
-      const currentValue = item[sortName as keyof ISkillsModel];
+      const currentValue = item[sortName as keyof ISkillModel];
       const nextSkill = data[index + 1] || null;
-      const nextValue = nextSkill ? nextSkill[sortName as keyof ISkillsModel] : null;
+      const nextValue = nextSkill ? nextSkill[sortName as keyof ISkillModel] : null;
 
       if (typeof currentValue === 'string' && typeof nextValue === 'string') {
         const compare1 = currentValue[0].toUpperCase();
@@ -58,7 +55,7 @@ const useSkillTable = (skills: ISkillsModel[], sortName: string, sortAsc: boolea
     });
 
     return groupData;
-  }, [sortName, skills, count, sortAsc]);
+  }, [sortName, skills, sortAsc, doSort]);
 
   return {
     doSort,

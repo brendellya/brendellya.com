@@ -1,4 +1,4 @@
-@import "assets/scss/index";
+@import "assets/scss/theme-import";
 
 $timelineBg: $gray-100;
 $timelineHeight: 480px;
@@ -46,18 +46,25 @@ $timelineCardShadow: 0 8px 17px 2px rgba(0,0,0,0.14),
     display: block;
     width: 1px;
     height: 30px;
-    background-color: var(--bt-gray-500);
+    background-color: var(--bt-color-primary);
     position: absolute;
     top: -10px;
     font-size: 1rem;
     text-indent: 2px;
-    color: var(--bt-gray-500);;
+
+    span {
+      color: var(--bt-color-primary);
+      font-weight: $font-weight-bold;
+    }
   }
 }
 
 .timeline_card {
   .card {
     padding: 1rem;
+    min-height: 15rem;
+    height: auto;
+    white-space: normal;
     background-color: white;
     position: absolute;
     bottom: $timelinePlotLineHeight;
@@ -91,18 +98,6 @@ $timelineCardShadow: 0 8px 17px 2px rgba(0,0,0,0.14),
     position: absolute;
     z-index: 1;
   }
-  //&:before {
-  //  content: '';
-  //  display: inline-block;
-  //  margin-left: calc(($timelineDotSize / 2) - $timelineDotSize);
-  //  width: $timelineDotSize;
-  //  height: $timelineDotSize;
-  //  position: absolute;
-  //  left: 50%;
-  //  background-color: rgba(87, 77, 231, 0.5);
-  //  border-radius: 50%;
-  //  z-index: 2;
-  //}
 
   &.bottom {
     .card {

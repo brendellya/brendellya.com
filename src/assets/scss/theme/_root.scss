@@ -4,20 +4,15 @@
   }
 
   @each $name, $value in $colors {
-    --bt-#{$name}: #{$value};
+    --bt-color-#{$name}: #{$value};
   }
 
-  --bt-font-primary: 'Roboto Slab', sans-serif;
+  --bt-font-body: 'Roboto Slab', serif;
   --bt-font-heading: 'Roboto', sans-serif;
-  --bt-heading-color: #AF3B6E;
   --bt-header-bg: #252422;
   --bt-header-color: #fff;
   --bt-body-bg: #000;
   --bt-body-color: #252422;
-  --bt-link-color: #8d8d8d;
-  --bt-block-a: #ced4da;
-  --bt-block-b: #adb5bd;
-
-
+  --bt-link-color: #AF3B6E;
 }
 

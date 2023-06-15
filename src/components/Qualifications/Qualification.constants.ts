@@ -1,4 +1,4 @@
-import { ISkillsModel } from './Skills.types';
+import { ISkillModel } from './Qualification.types';
 
 export const SORT_OPTIONS = {
   Alpha: 'name',
@@ -7,14 +7,14 @@ export const SORT_OPTIONS = {
   Experience: 'yearsExp',
 };
 
-export const skills: ISkillsModel[] = [
+export const skillData: ISkillModel[] = [
   {
     name: 'Javascript',
     symbol: 'js',
     version: '2019',
     yearsExp: 15,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -23,7 +23,7 @@ export const skills: ISkillsModel[] = [
     version: '4',
     yearsExp: 15,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -32,7 +32,7 @@ export const skills: ISkillsModel[] = [
     version: '7',
     yearsExp: 8,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -41,7 +41,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 20,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'software',
   },
   {
@@ -50,7 +50,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 20,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -59,7 +59,7 @@ export const skills: ISkillsModel[] = [
     version: '3',
     yearsExp: 20,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -68,7 +68,7 @@ export const skills: ISkillsModel[] = [
     version: '17',
     yearsExp: 1,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -77,7 +77,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 10,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -86,7 +86,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 8,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -95,7 +95,7 @@ export const skills: ISkillsModel[] = [
     version: '5',
     yearsExp: 5,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -104,7 +104,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 4,
     lastUsed: 2016,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -113,7 +113,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 14,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -122,7 +122,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 13,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -131,7 +131,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 4,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -140,7 +140,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 4,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -149,7 +149,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 5,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -158,7 +158,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 6,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'testing',
   },
   {
@@ -167,7 +167,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 6,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'testing',
   },
   {
@@ -176,7 +176,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 6,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'testing',
   },
   {
@@ -185,7 +185,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 2,
     lastUsed: 2014,
-    mood: 'electric',
+    mood: '',
     category: 'testing',
   },
   {
@@ -194,7 +194,7 @@ export const skills: ISkillsModel[] = [
     version: '5',
     yearsExp: 10,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -203,7 +203,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 10,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'software',
   },
   {
@@ -212,7 +212,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 7,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -221,7 +221,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 10,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -230,7 +230,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 10,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'process',
   },
   {
@@ -239,7 +239,7 @@ export const skills: ISkillsModel[] = [
     version: '7',
     yearsExp: 2,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -248,7 +248,7 @@ export const skills: ISkillsModel[] = [
     version: '8',
     yearsExp: 1,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -257,7 +257,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 10,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'software',
   },
   {
@@ -266,7 +266,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 4,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -275,7 +275,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 7,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'software',
   },
   {
@@ -284,7 +284,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'software',
   },
   {
@@ -293,7 +293,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2019,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -302,7 +302,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -311,7 +311,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 3,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -320,7 +320,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 6,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -329,7 +329,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 3,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'architecture',
   },
   {
@@ -338,7 +338,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 3,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -347,7 +347,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2014,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -356,7 +356,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -365,7 +365,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 5,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -374,7 +374,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'tools',
   },
   {
@@ -383,7 +383,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 4,
     lastUsed: 2023,
-    mood: 'electric',
+    mood: '',
     category: 'design',
   },
   {
@@ -392,7 +392,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 7,
     lastUsed: 2010,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -401,7 +401,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 4,
     lastUsed: 2010,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -410,7 +410,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 2,
     lastUsed: 2017,
-    mood: 'electric',
+    mood: '',
     category: 'languages',
   },
   {
@@ -419,7 +419,7 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 1,
     lastUsed: 2020,
-    mood: 'electric',
+    mood: '',
     category: 'frameworks',
   },
   {
@@ -428,7 +428,16 @@ export const skills: ISkillsModel[] = [
     version: null,
     yearsExp: 6,
     lastUsed: 2021,
-    mood: 'electric',
+    mood: '',
+    category: 'languages',
+  },
+  {
+    name: 'Yaml',
+    symbol: 'yml',
+    version: null,
+    yearsExp: 2,
+    lastUsed: 2023,
+    mood: '',
     category: 'languages',
   },
 ];

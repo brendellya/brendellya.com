@@ -1,9 +1,11 @@
 import React from 'react';
 import Header from 'components/Header';
 import Bio from 'components/Bio';
-import WorkHistory from 'components/WorkHistory';
-import Skills from 'components/Skills';
+import Experience from 'components/Experience';
+import Qualification from 'components/Qualifications';
 import Banner from './components/Banner';
+import SiteDetail from './components/SiteDetail';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <main className='container bg-white'>
         <Banner />
         <Bio />
-        <WorkHistory />
-        <Skills />
+        <Experience />
+        <Qualification />
+        <SiteDetail />
       </main>
+      <Footer />
     </>
   );
 }

@@ -35,34 +35,31 @@ h6, .h6 {
   font-size: $h6-font-size;
 }
 
-// Font Sizes
+// Font Sizes & Weights
 .font {
-  &-xs {
+  &-size-xs {
     font-size: $font-size-xs;
   }
 
-  &-sm {
+  &-size-sm {
     font-size: $font-size-sm;
   }
 
-  &-md {
+  &-size-md {
     font-size: $font-size;
   }
 
-  &-lg {
+  &-size-lg {
     font-size: $font-size-lg;
   }
 
-  &-xl {
+  &-size-xl {
     font-size: $font-size-xl;
   }
-  &-xxl {
+  &-size-xxl {
     font-size: $font-size-xxl;
   }
-}
 
-// Font Weights
-.font {
   &-weight-light {
     font-weight: $font-weight-light;
   }
@@ -81,22 +78,30 @@ h6, .h6 {
 }
 
 // Text Styles
-
 .text {
   &-heading {
-    color: black;
+    font-family: var(--bt-font-heading);
+    color: var(--bt-color-secondary);
     font-weight: $font-weight-bolder;
+    text-align: center;
     text-transform: uppercase;
     font-size: 1.5rem;
+
+    &-dark {
+      color: var(--bt-gray-500);
+    }
   }
+
   &-subheading {
-    font-family: 'Roboto Slab';
+    font-family: var(--bt-font-body);
     font-weight: $font-weight-semibold;
+    font-size: 2.5rem;
   }
+
   &-primary {
-    color: var(--bt-primary);
+    font-family: var(--bt-font-body);
   }
-  &-accent {
-    color: var(--bt-accent);
+  &-secondary {
+    font-family: var(--bt-font-heading);
   }
 }

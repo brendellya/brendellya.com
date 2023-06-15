@@ -1,5 +1,6 @@
 import { JSX } from 'react';
-import { ISkillItemProps } from './SkillTable.types';
+import { ISkillItemProps } from './index';
+import classNames from 'classnames';
 
 export const EmptySkillItem = (): JSX.Element => {
   return (
@@ -11,23 +12,27 @@ export const EmptySkillItem = (): JSX.Element => {
   );
 };
 
-export const SkillItem = ({ skill, index, color = '' }: ISkillItemProps): JSX.Element => {
+export const SkillItem = ({ skill, index, color, group }: ISkillItemProps): JSX.Element => {
   return (
     <div className='element'>
-      <div className='skill p-1 d-grid align-content-between' data-color={color}>
-        <div className='d-flex justify-content-between font-sm'>
+      {/* Todo: add randomize skill group colors */}
+      <div className={classNames('skill p-1 d-grid align-content-between text-secondary primary')} data-group={group}>
+        <div className='d-flex justify-content-between font-size-sm'>
           <small>{index}</small>
-          <i className='fa fa-smile-o' title='I love it!'></i>
         </div>
         <div className='name'>
-          <div className='font-lg font-weight-bold'>{skill.symbol}</div>
-          <small className='font-xs'>
+          <div className='font-size-lg font-weight-bold'>{skill.symbol}</div>
+          <small className='font-size-xs'>
             {skill.name} <span>{skill.version ? `(${skill.version})` : ''}</span>
           </small>
         </div>
-        <div className='details d-flex justify-content-between font-sm'>
-          <div className='lastUsed'>{skill?.lastUsed}</div>
-          <div className='experience'>{skill.yearsExp}</div>
+        <div className='details d-flex justify-content-between font-size-sm'>
+          <div className='lastUsed' title='last used'>
+            {skill?.lastUsed}
+          </div>
+          <div className='experience' title='years experience'>
+            {skill.yearsExp}
+          </div>
         </div>
       </div>
     </div>

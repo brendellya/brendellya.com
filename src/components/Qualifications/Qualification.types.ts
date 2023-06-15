@@ -1,4 +1,4 @@
-export interface ISkillsModel {
+export interface ISkillModel {
   name: string;
   symbol: string;
   version: string | null;

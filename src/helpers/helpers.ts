@@ -8,12 +8,7 @@ export const formatLocalDate = (dateStr: string, isUTC = false) => {
     return {};
   }
   const newDate = new Date(dateStr);
-  const [year, month, day, hour] = [
-    newDate.getFullYear(),
-    newDate.getMonth(),
-    newDate.getDate(),
-    newDate.getHours(),
-  ];
+  const [year, month] = [newDate.getFullYear(), newDate.getMonth()];
 
   const zonedDate = isUTC
     ? utcToZonedTime(new Date(year, month + 1, 1), TIMEZONE)

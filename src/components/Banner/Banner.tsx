@@ -7,7 +7,7 @@ const Banner = () => {
         <h2>
           UI Developer
           <br />
-          <span>Code Wrangler</span> <span>CSS Mystic</span>
+          <span>Code Wrangler</span> <span>&</span> <span>CSS Mystic</span>
         </h2>
       </div>
       <div className='col-4 collage'></div>

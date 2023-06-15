@@ -1,6 +1,4 @@
 
-
-
 @each $name, $value in $grays {
   .bg-gray-#{$name} {
     background-color: $value;
