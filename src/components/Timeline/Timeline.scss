@@ -1,0 +1,112 @@
+@import "assets/scss/theme-import";
+
+$timelineBg: $gray-100;
+$timelineHeight: 480px;
+$timelineSegmentWidth: 20px;
+$timelineSegmentHeight: 10px;
+$timelineDotSize: 8px;
+$timelinePlotLineHeight: 40px;
+$timelinePlotLineWidth: 4px;
+$timelineSpotXl: 500px;
+$timelineSpotLg: 400px;
+$timelineSpotMd: 300px;
+$timelineSpotSm: 150px;
+$timelineCardShadow: 0 8px 17px 2px rgba(0,0,0,0.14),
+0 3px 14px 2px rgba(0,0,0,0.12),
+0 5px 5px -3px rgba(0,0,0,0.2);
+
+@mixin cardSize ($size: $timelineSpotMd) {
+  width: $size;
+  margin-left: calc(($size / 2 - $size) + ($timelineSegmentWidth / 2));
+}
+
+.timeline_actions {
+  button {
+    margin: 0 .5rem;
+    text-align: center;
+  }
+}
+.timeline_panel {
+  height: $timelineHeight;
+  background-color: $timelineBg;
+  white-space: nowrap;
+  overflow: hidden;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    height: $timelineSegmentHeight;
+    width: $timelineSegmentWidth;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: calc(($timelineHeight / 2) - ($timelinePlotLineHeight / 2));
+  }
+  .segment-line {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: var(--bt-color-primary);
+    position: absolute;
+    top: -10px;
+    font-size: 1rem;
+    text-indent: 2px;
+
+    span {
+      color: var(--bt-color-primary);
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.timeline_card {
+  .card {
+    padding: 1rem;
+    min-height: 15rem;
+    height: auto;
+    white-space: normal;
+    background-color: white;
+    position: absolute;
+    bottom: $timelinePlotLineHeight;
+    z-index: 10;
+    box-shadow: $timelineCardShadow;
+
+    @include cardSize;
+
+    &.sm {
+      @include cardSize($timelineSpotSm);
+    }
+
+    &.lg {
+      @include cardSize($timelineSpotLg);
+    }
+
+    &.xl {
+      width: $timelineSpotXl;
+      @include cardSize($timelineSpotXl);
+    }
+  }
+
+  .line {
+    width: $timelinePlotLineWidth;
+    height: $timelinePlotLineHeight;
+    margin-left: calc(($timelinePlotLineWidth / 2) - $timelinePlotLineWidth);
+    background: rgba(0,0,0,0.1);
+    display: inline-block;
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &.bottom {
+    .card {
+      bottom: unset;
+      top: $timelinePlotLineHeight;
+    }
+
+    .line {
+      bottom: unset;
+    }
+  }
+}

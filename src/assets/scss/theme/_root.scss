@@ -1,0 +1,18 @@
+:root {
+  @each $name, $value in $grays {
+    --bt-gray-#{$name}: #{$value};
+  }
+
+  @each $name, $value in $colors {
+    --bt-color-#{$name}: #{$value};
+  }
+
+  --bt-font-body: 'Roboto Slab', serif;
+  --bt-font-heading: 'Roboto', sans-serif;
+  --bt-header-bg: #252422;
+  --bt-header-color: #fff;
+  --bt-body-bg: #000;
+  --bt-body-color: #252422;
+  --bt-link-color: #AF3B6E;
+}
+

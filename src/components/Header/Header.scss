@@ -1,0 +1,25 @@
+@import "assets/scss/theme-import";
+
+ // Todo: fix header
+header {
+  padding: 2rem 0;
+  width: 100%;
+  min-height: $headerHeight;
+  position: fixed;
+  background-color: var(--bt-header-bg);
+  color: var(--bt-header-color);
+  box-shadow: $shadow-2;
+  z-index: 1000;
+
+  .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .brand {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    line-height: 4rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,45 @@
+
+
+@mixin buttonsDefault($color: $secondary, $bg: $gray-150, $border: $gray-300, $hover: $gray-800) {
+  color: $color;
+  background-color: $bg;
+  border: 1px solid $border;
+
+  &:hover, &:active {
+    color: $hover;
+    background-color: darken($bg, 5);
+    border: 1px solid darken($border, 10);
+  }
+}
+
+@mixin buttonsLink($color: $secondary, $bg: $gray-150, $border: $gray-300) {
+  color: $color;
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  &:hover, &:active {
+    color: $color;
+    background-color: $bg;
+    border: 1px solid $border;
+  }
+
+  &.active {
+    background-color: $bg;
+    border: 1px solid $border;
+  }
+}
+
+
+@mixin FontAwesome ($icon: false) {
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+  @if $icon {
+    &:before {
+      content: $icon;
+    }
+  }
+}

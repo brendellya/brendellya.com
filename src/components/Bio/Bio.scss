@@ -1,0 +1,48 @@
+@import "assets/scss/theme-import";
+
+@mixin brackets () {
+  font-family: 'Roboto Light';
+  position: absolute;
+  top: 0;
+  font-size: 20rem;
+  color: rgba(0, 0, 0, .1);
+}
+
+.section-bio {
+  .expertise {
+    min-height: 240px;
+    max-width: 840px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+
+
+      li {
+        display: inline-block;
+        margin: 1rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        background-color: white;
+        box-shadow: $shadow-1;
+      }
+
+    &:before {
+      content: "{";
+      left: -20px;
+
+      @include brackets;
+    }
+    &:after {
+      content: '}';
+      right: -20px;
+
+      @include brackets;
+    }
+  }
+
+  .collage {
+    background: url('../../assets/img/20220516_153444.jpg') center 0 no-repeat;
+    background-size: cover;
+  }
+}
+

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Roboto+Slab:wght@200;300;400;500;700&family=Roboto:ital,wght@0,400;1,100&display=swap');
+
+%heading {
+  margin: 0;
+  font-family: var(--bt-font-heading);
+}
+
+h1, .h1 {
+  @extend %heading;
+  font-size: $h1-font-size;
+}
+
+h2, .h2 {
+  @extend %heading;
+  font-size: $h2-font-size;
+}
+
+h3, .h3 {
+  @extend %heading;
+  font-size: $h3-font-size;
+}
+
+h4, .h4 {
+  @extend %heading;
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  @extend %heading;
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  @extend %heading;
+  font-size: $h6-font-size;
+}
+
+// Font Sizes & Weights
+.font {
+  &-size-xs {
+    font-size: $font-size-xs;
+  }
+
+  &-size-sm {
+    font-size: $font-size-sm;
+  }
+
+  &-size-md {
+    font-size: $font-size;
+  }
+
+  &-size-lg {
+    font-size: $font-size-lg;
+  }
+
+  &-size-xl {
+    font-size: $font-size-xl;
+  }
+  &-size-xxl {
+    font-size: $font-size-xxl;
+  }
+
+  &-weight-light {
+    font-weight: $font-weight-light;
+  }
+  &-weight-normal {
+    font-weight: $font-weight-normal;
+  }
+  &-weight-semibold {
+    font-weight: $font-weight-semibold;
+  }
+  &-weight-bold {
+    font-weight: $font-weight-bold;
+  }
+  &-weight-bolder {
+    font-weight: $font-weight-bolder;
+  }
+}
+
+// Text Styles
+.text {
+  &-heading {
+    font-family: var(--bt-font-heading);
+    color: var(--bt-color-secondary);
+    font-weight: $font-weight-bolder;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+    &-dark {
+      color: var(--bt-gray-500);
+    }
+  }
+
+  &-subheading {
+    font-family: var(--bt-font-body);
+    font-weight: $font-weight-semibold;
+    font-size: 2.5rem;
+  }
+
+  &-primary {
+    font-family: var(--bt-font-body);
+  }
+  &-secondary {
+    font-family: var(--bt-font-heading);
+  }
+}

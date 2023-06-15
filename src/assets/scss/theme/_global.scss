@@ -1,0 +1,83 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bt-body-bg);
+  color: var(--bt-body-color);
+  font-family: var(--bt-font-body);
+  font-size: $font-size;
+}
+
+a {
+  color: var(--bt-link-color);
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+
+  &:hover, active {
+    border-bottom: 1px dashed var(--bt-link-color);
+  }
+
+  &.dark {
+    color: var(--bt-gray-400);
+
+    &:hover, active {
+      border-bottom: 1px dashed var(--bt-gray-400);
+    }
+  }
+
+}
+
+.disabled, [disabled] {
+  opacity: $disableOpacity;
+  cursor: default;
+}
+
+main.container {
+  padding-top: $headerHeight;
+}
+
+
+
+button {
+  padding: $button-padding;
+  border-radius: $border-radius;
+  font-family: var(--bt-font-heading);
+  font-weight: $font-weight-bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+
+  @include buttonsDefault();
+}
+
+.btn {
+  &-link {
+    @include buttonsLink();
+  }
+
+  &-sm {
+    min-width: 10rem;
+  }
+  &-md {
+    min-width: 15rem;
+  }
+  &-lg {
+    min-width: 20rem;
+  }
+}
+
+.divider {
+  text-align: center;
+  height: 2px;
+  background: #80808024;
+  position: relative;
+  width: 33%;
+}
+
+

@@ -1,0 +1,30 @@
+
+@each $name, $value in $grays {
+  .bg-gray-#{$name} {
+    background-color: $value;
+  }
+  .color-gray-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+  .color-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $blues {
+  .bg-blue-#{$name} {
+    background-color: $value;
+  }
+  .color-blue-#{$name} {
+    color: $value;
+  }
+}
+
+
+

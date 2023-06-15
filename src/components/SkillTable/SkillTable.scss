@@ -1,0 +1,124 @@
+@use "sass:color";
+@import "assets/scss/theme-import";
+
+$skillCardMargin: 5px;
+$skillCardWidth: 90px;
+$skillCardHeight: 90px;
+$skillCardDefaultColor: #e1e1e1;
+$skillCardBorder: 2px solid rgba(0,0,0,0.05);
+$skillCardBorderRadius: 2px;
+$skillCardScale: 1.5;
+
+$saturationHigh: 10%;
+$saturationMid: 10%;
+$saturationLow: -5%;
+$lightnessLow: 20%;
+
+
+.skill-table {
+
+  .element {
+    display: inline-block;
+    margin: $skillCardMargin;
+    height: $skillCardHeight;
+    width: $skillCardWidth;
+    position: relative;
+  }
+
+  .skill:not(.placeholder) {
+    width: 100%;
+    height: 100%;
+    background-color: $skillCardDefaultColor;
+    border: $skillCardBorder;
+    border-radius: $skillCardBorderRadius;
+    position: absolute;
+    z-index: 1;
+
+    .name {
+      text-transform: capitalize;
+
+    }
+
+    small span {
+      padding-left: .25rem;
+      font-size: 1rem;
+      opacity: 0.5;
+      display: none;
+    }
+    &:hover {
+      transform: scale($skillCardScale);
+      z-index: 10;
+
+      small span {
+        display: inline-block;
+      }
+
+    }
+  }
+
+  .skill {
+    &.placeholder {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: rgba(128, 128, 128, 0.1);
+      border: 1px solid rgba(128, 128, 128, 0.05);
+    }
+
+    &.primary {
+      background-color: color.adjust($primary, $saturation: -5%, $lightness: 35%);
+    }
+
+    &.blue-1 {
+      background-color: color.adjust(#90caf9, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.blue-2 {
+      background-color: color.adjust(#82b1ff, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.purple-1 {
+      background-color: color.adjust(#ce93d8, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.purple-2 {
+      background-color: color.adjust(#b388ff, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.red-1 {
+      background-color: color.adjust(#ffcdd2, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.red-2 {
+      background-color: color.adjust(#ff8a80, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.pink-1 {
+      background-color: color.adjust(#f8bbd0, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.pink-2 {
+      background-color: color.adjust(#ff80ab, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.teal-1 {
+      background-color: color.adjust(#b2dfdb, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.teal-2 {
+      background-color: color.adjust(#64ffda, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.yellow-1 {
+      background-color: color.adjust(#fff9c4, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.yellow-2 {
+      background-color: color.adjust(#ffff8d, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.green-1 {
+      background-color: color.adjust(#a5d6a7, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.green-2 {
+      background-color: color.adjust(#b9f6ca, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.orange-1 {
+      background-color: color.adjust(#ffe0b2, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+    &.orange-2 {
+      background-color: color.adjust(#ffd180, $saturation: $saturationLow, $lightness: $lightnessLow);
+    }
+  }
+}

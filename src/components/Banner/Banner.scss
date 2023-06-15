@@ -1,0 +1,19 @@
+
+.section-banner {
+  min-height: 300px;
+
+  h2 {
+    font-family: 'Roboto Slab';
+    font-size: 8rem;
+    text-align: center;
+    max-width: 600px;
+    font-weight: 700;
+    margin: auto;
+  }
+
+  .collage {
+    background: url('../../assets/img/bali.jpg') center 0 no-repeat;
+    background-size: cover;
+  }
+}
+
