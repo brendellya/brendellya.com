@@ -13,7 +13,7 @@ const Experience = () => {
 
           <p>
             Take a quick glance of my journey from my earliest days of taming code, to my most recent adventures in
-            building highly reactive applications and elevating UIs. Check the{' '}
+            building highly reactive applications to branded experiences and UI toolkit creation. Check the{' '}
             <a href='/docs/BT_Resume_online.pdf' rel='nofollow' target='_blank'>
               Resume
             </a>{' '}

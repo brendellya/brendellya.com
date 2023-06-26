@@ -8,12 +8,12 @@ const SiteDetail = () => {
 
         <h3 className='text-subheading font-xl py-4'>Thanks, for stopping by...</h3>
         <p>
-          This personal website has just been relaunched, and it a work in progress with future updates and
-          optimizations planned. All code and design are original, and source code can be found at{' '}
+          This personal website has just been relaunched and is a work in progress with future updates and optimizations
+          planned. All code and design are original, and source code can be found at{' '}
           <a className='dark' href='https://github.com/brendellya/brendellya.com/'>
             github.com
-          </a>
-          .
+          </a>{' '}
+          if you are interested in looking under the hood.
         </p>
       </div>
 

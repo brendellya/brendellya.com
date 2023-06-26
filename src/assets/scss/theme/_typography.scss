@@ -37,6 +37,10 @@ h6, .h6 {
 
 // Font Sizes & Weights
 .font {
+  &-size-xxs {
+    font-size: $font-size-xxs;
+  }
+
   &-size-xs {
     font-size: $font-size-xs;
   }

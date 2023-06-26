@@ -23,7 +23,7 @@ export const SkillItem = ({ skill, index, color, group }: ISkillItemProps): JSX.
         <div className='name'>
           <div className='font-size-lg font-weight-bold'>{skill.symbol}</div>
           <small className='font-size-xs'>
-            {skill.name} <span>{skill.version ? `(${skill.version})` : ''}</span>
+            {skill.name} <span className='font-size-xxs'>{skill.version ? `(${skill.version})` : ''}</span>
           </small>
         </div>
         <div className='details d-flex justify-content-between font-size-sm'>

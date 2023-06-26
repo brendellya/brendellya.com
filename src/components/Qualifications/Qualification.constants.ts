@@ -29,7 +29,7 @@ export const skillData: ISkillModel[] = [
   {
     name: 'Angular',
     symbol: 'ng',
-    version: '7',
+    version: '11',
     yearsExp: 8,
     lastUsed: 2021,
     mood: '',

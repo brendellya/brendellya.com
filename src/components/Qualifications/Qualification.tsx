@@ -21,8 +21,10 @@ const Qualification = (): JSX.Element => {
 
         <h3 className='text-subheading font-xl py-4'>Practical Skills</h3>
         <p>
-          Below are some of my of my most relevant skills, in addition to the skills listed below there are skills that
-          I've explored as personal learnings.
+          Having started web development building custom apps with PHP and MySQL, over the years I've lean into the
+          exciting front-end space. I've cultivated a strong UI skill set including, building responsive and accessible
+          applications. Below are some of my of my most relevant skills. In addition to the skills listed below I also
+          take the time to experiment with other technology on a personal basis.
         </p>
 
         <div className='pt-4 pb-2 d-flex align-items-center gap-2'>

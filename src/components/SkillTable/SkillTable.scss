@@ -40,13 +40,16 @@ $lightnessLow: 20%;
 
     small span {
       padding-left: .25rem;
-      font-size: 1rem;
       opacity: 0.5;
       display: none;
     }
     &:hover {
       transform: scale($skillCardScale);
       z-index: 10;
+
+      small {
+        white-space: nowrap;
+      }
 
       small span {
         display: initial;
